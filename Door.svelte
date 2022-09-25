@@ -10,7 +10,7 @@
   }
 
   .door {
-    background-color: brown;
+    background-color: green;
     position: absolute;
     top: 0px;
     left: 0px;
