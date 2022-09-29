@@ -3,7 +3,7 @@
   let doors = Array.from({ length: 24 }, (_, i) => {
     return {
       number: i + 1,
-      content: "Hello World"
+      content: "https://static.wikia.nocookie.net/lego/images/8/8d/MS8_Santa.jpg"
     };
   });
 </script>
@@ -20,12 +20,6 @@
     column-gap: 10pt;
     row-gap: 10pt;
     justify-content: center;
-  }
-  .item {
-    grid-column-start: auto;
-    grid-column-end: auto;
-    grid-row-start: auto;
-    grid-row-end: auto;
   }
 
   @media only screen and (max-width: 1090px) {

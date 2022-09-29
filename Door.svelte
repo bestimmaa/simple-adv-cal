@@ -1,12 +1,25 @@
+<script>
+  let open = false;
+  export let suprise;
+  let doorImage =
+    `url(${suprise})`;
+  let backDoorColor = "#FF5555";
+  $: cssVarStyles = `--door-image:${doorImage};--back-door-color:${backDoorColor}`;
+</script>
+
 <style>
   .backDoor {
-    background-color: #333;
+    background-color: var(--back-door-color, lightgray);
     position: relative;
     width: 200px;
     height: 300px;
 
     margin: 0 auto;
     margin-top: 0px;
+
+    background-image: var(--door-image, lightgray);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .door {
@@ -33,12 +46,8 @@
   }
 </style>
 
-<script>
-	let open = false;
-	export let suprise;
-</script>
 
-<div class="backDoor">
-  {suprise}
+
+<div style="{cssVarStyles}" class="backDoor">
 	<div class="{open === true ? 'door doorOpen' : 'door'}" on:click="{() => open = !open}"><span class="number"><slot></slot></span></div>
 </div>
