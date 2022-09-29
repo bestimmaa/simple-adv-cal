@@ -54,7 +54,7 @@
 	<h1>Simple AdvCal</h1>
   <div class='container'>
     {#each doors as door}
-    <Door class='item' suprise={door.content}>{door.number}</Door>
+    <Door suprise={door.content}>{door.number}</Door>
     {/each}
   </div>
 </main>
